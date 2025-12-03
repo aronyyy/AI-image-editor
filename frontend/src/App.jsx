@@ -26,7 +26,7 @@ export default function App() {
     fd.append("prompt", prompt || "Cartoonify this photo in a 90s style");
 
     try {
-      const res = await axios.post("https://ai-cartoon-api.onrender.com", fd, {
+      const res = await axios.post("https://ai-cartoon-api.onrender.com/api/edit", fd, {
         headers: { "Content-Type": "multipart/form-data" },
         timeout: 180000, 
       });
